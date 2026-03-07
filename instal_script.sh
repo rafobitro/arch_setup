@@ -42,6 +42,6 @@ rm -rf /tmp/yay
 echo "Installing yay packages"
 while read -r package; do
 yay -S --noconfirm "$package"
-done < yay_packages.txt
+done < "$BASEDIR/yay_packages.txt"
 
 echo "Done! Nuclear reset successful."
