@@ -18,7 +18,6 @@ iwd
 bluez
 bluez-utils
 waybar
-ghostty
 htop
 pavucontrol
 hyprlock
