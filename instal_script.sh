@@ -19,6 +19,20 @@ while read app; do
     flatpak install -y flathub "$app"
 done < flatpaks.txt
 
+echo "configurate yay"
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
+makepkg -si --noconfirm
+cd -
+rm -rf /tmp/yay
+
+
+echo "Installing yay packages"
+while read -r package; do
+yay -S --noconfirm "$package"
+done < yay_packages.txt
+
+
 echo "Copying configs"
 mkdir -p ~/.config
 cp -r config/* ~/.config/
@@ -31,17 +45,5 @@ g++ waybar_switch.cpp -o waybar_switch
 echo "cherack if executable"
 chmod +x opacity touchpad_toggl waybar_switch
 
-echo "configurate yay"
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-cd /tmp/yay
-makepkg -si --noconfirm
-cd -
-rm -rf /tmp/yay
-
-
-echo "Installing yay packages"
-while read -r package; do
-yay -S --noconfirm "$package"
-done < "$SCRIPT_DIR/yay_packages.txt"
 
 echo "Done! Nuclear reset successful."
