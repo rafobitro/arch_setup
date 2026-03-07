@@ -17,7 +17,7 @@
     "network",
     "pulseaudio", 
     "backlight",
-    "battery",
+    "battery"
   ],
 
   "hyprland/workspaces": {
@@ -38,7 +38,7 @@
         "off": "󰂲",
         "connected": "󰂱",
         },
-    "on-click": "kitty -e /usr/local/bin/bluetuith",
+    "on-click": "kitty -e bluetuith",
     "tooltip-format-connected":"{device_enumerate}"
   },
 
