@@ -1,2 +1,3 @@
 waybar-module-pomodoro
 ttf-jetbrains-mono-nerd
+bluetuith
