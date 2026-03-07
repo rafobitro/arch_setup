@@ -23,4 +23,12 @@ echo "Copying configs"
 mkdir -p ~/.config
 cp -r config/* ~/.config/
 
-echo "Done"
+echo "compiling scripts"
+cd ~/.config/hypr/scripts/
+g++ opacity.cpp -o opacity
+g++ touchpad_toggl.cpp -o touchpad_toggl
+g++ waybar_switch.cpp -o waybar_switch
+echo "cherack if executable"
+chmod +x opacity touchpad_toggl waybar_switch
+
+echo "Done! Nuclear reset successful."
