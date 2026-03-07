@@ -31,4 +31,17 @@ g++ waybar_switch.cpp -o waybar_switch
 echo "cherack if executable"
 chmod +x opacity touchpad_toggl waybar_switch
 
+echo "configurate yay"
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
+makepkg -si --noconfirm
+cd -
+rm -rf /tmp/yay
+
+
+echo "Installing yay packages"
+while read -r package; do
+yay -S --noconfirm "$package"
+done < yay_packages.txt
+
 echo "Done! Nuclear reset successful."
