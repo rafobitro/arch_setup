@@ -38,7 +38,7 @@
         "off": "󰂲",
         "connected": "󰂱",
         },
-    "on-click": "kitty -e bluetuith",
+    "on-click": "kitty --hold -e bluetuith",
     "tooltip-format-connected":"{device_enumerate}"
   },
 
