@@ -24,4 +24,4 @@ chmod +x instal_script.sh
 ```
 
 **NOTE**
-I have tested this on different Arch machines with different setups, and it worked (download mixing up and overwrite configs). I haven't tried it on a completely new machine yet, but I am pretty sure it will work. I plan to test it on a fresh system in the near future and will update this repository accordingly.
+I have tested this on different Arch machines with different setups, and it worked (download mixing up and overwrite configs). I haven't tried it on a completely new machine yet, but I am pretty sure it will work. I plan to test it on a fresh system in the near future and will update this repository accordingly. PS. it is working 
