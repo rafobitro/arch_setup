@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+echo "creating standard directories"
+xdg-user-dirs-update
+
 echo "Updating system"
 sudo sed -i '/\[multilib\]/,/Include/ s/^#//' /etc/pacman.conf
 sudo pacman -Syu --noconfirm
@@ -45,5 +48,8 @@ g++ waybar_switch.cpp -o waybar_switch
 echo "cherack if executable"
 chmod +x opacity touchpad_toggl waybar_switch
 
+echo "delating dawnloded files"
+cd ~
+rm -rf arch_setup
 
 echo "Done! Nuclear reset successful."
