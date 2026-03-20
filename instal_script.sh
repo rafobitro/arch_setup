@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-echo "creating standard directories"
-xdg-user-dirs-update
 
 echo "Updating system"
 sudo sed -i '/\[multilib\]/,/Include/ s/^#//' /etc/pacman.conf
